@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    font-family: yekan;
+
+}
+
+@font-face {
+    font-family: yekan;
+    src: url(tools/fonts/IRANYekan/ttf/IRANYekanWebBold.ttf);
+}
+
+body {
+    background-color: rgb(44, 47, 70) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+
+}
+
+#game {
+    position: relative;
+    background-color: rgb(218, 100, 100);
+    width: 55%;
+    height: 200px;
+    overflow: hidden;
+    transition: all 1000ms;
+ 
+}
+
+.night {
+    background-color: rgb(34, 37, 53) !important;
+
+}
+
+#sun {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(228, 211, 170);
+    position: absolute;
+    right: 60px;
+    top: 105%;
+    transition: all 1s;
+
+}
+
+#moon {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(202, 210, 236);
+    position: absolute;
+    right: 60px;
+    top: 105%;
+    transition: all 1s;
+    overflow: hidden;
+
+}
+
+.cloud1 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.822);
+    right: -75px;
+    top: 17px;
+    animation: clouds 20s linear infinite;
+
+}
+
+.cloud1::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.822);
+    right: -15px;
+    top: -15px;
+
+}
+
+.cloud2 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.822);
+    right: -75px;
+    top: 25px;
+    animation: clouds 20s linear infinite;
+    animation-delay: 7s;
+
+}
+
+.cloud2::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.822);
+    right: -15px;
+    top: -15px;
+
+}
+
+.cloud3 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.822);
+    right: -75px;
+    top: 5px;
+    animation: clouds 20s linear infinite;
+    animation-delay: 16s;
+
+}
+
+.cloud3::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.822);
+    right: -15px;
+    top: -15px;
+
+}
+
+
+#moon::before {
+    content: "";
+    left: 5px;
+    top: 10px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(182, 187, 206);
+
+}
+
+#moon::after {
+    content: "";
+    left: 25px;
+    top: 20px;
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background-color: rgb(182, 187, 206);
+
+}
+
+.rise {
+    top: 25px !important;
+    box-shadow: 0 0 35px rgb(255, 255, 255);
+
+}
+
+#charecter {
+    background: url(image/charecter/cahrecter.gif);
+    background-size: cover !important;
+    height: 60px !important;
+    width: 60px !important;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    animation: charecter 500ms linear infinite;
+
+}
+
+.block {
+    --right: -20px;
+    width: 20px;
+    height: 30px;
+    background-color: rgb(214, 54, 54);
+    position: absolute;
+    bottom: 0;
+    right: var(--right);
+    animation: block 2s linear;
+
+}
+
+/* .move {
+    right: 100%;
+
+} */
+
+.jump {
+    animation: jump 600ms ease-in-out infinite !important;
+    background: url(image/charecter/cahrecter_jump.png) !important;
+
+}
+
+#score {
+    color: rgb(255, 255, 255);
+    margin-top: 2px;
+    margin-left: 6px;
+    font-size: 18px;
+
+}
+
+#high-score {
+    color: rgb(255, 255, 255);
+    margin-left: 6px;
+    font-size: 13px;
+    line-height: 14px;
+
+}
+
+.game_over {
+    background: url(image/charecter/cahrecter_jump.png) !important;
+
+}
+
+@keyframes block {
+    0% {right: -20px;}
+    100% {right: 100%;}
+}
+
+@keyframes jump {
+    0% {bottom: 0;}
+    50% {bottom: 100px;}
+    100% {bottom: 0;}
+    
+}
+
+@keyframes clouds {
+    0% {right: -75px;}
+    100% {right: 100%;}
+}
