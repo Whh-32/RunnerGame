@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     font-family: yekan;
-
 }
 
 @font-face {
@@ -18,7 +17,6 @@ body {
     min-height: 100vh;
     padding: 0;
     margin: 0;
-
 }
 
 #game {
@@ -28,12 +26,10 @@ body {
     height: 200px;
     overflow: hidden;
     transition: all 1000ms;
- 
 }
 
 .night {
     background-color: rgb(34, 37, 53) !important;
-
 }
 
 #sun {
@@ -44,7 +40,6 @@ body {
     right: 60px;
     top: 105%;
     transition: all 1s;
-
 }
 
 #moon {
@@ -56,7 +51,6 @@ body {
     top: 105%;
     transition: all 1s;
     overflow: hidden;
-
 }
 
 .cloud1 {
@@ -70,7 +64,6 @@ body {
     right: -75px;
     top: 17px;
     animation: clouds 20s linear infinite;
-
 }
 
 .cloud1::before {
@@ -81,7 +74,6 @@ body {
     background-color: rgba(255, 255, 255, 0.822);
     right: -15px;
     top: -15px;
-
 }
 
 .cloud2 {
@@ -96,7 +88,6 @@ body {
     top: 25px;
     animation: clouds 20s linear infinite;
     animation-delay: 7s;
-
 }
 
 .cloud2::before {
@@ -107,7 +98,6 @@ body {
     background-color: rgba(255, 255, 255, 0.822);
     right: -15px;
     top: -15px;
-
 }
 
 .cloud3 {
@@ -122,7 +112,6 @@ body {
     top: 5px;
     animation: clouds 20s linear infinite;
     animation-delay: 16s;
-
 }
 
 .cloud3::before {
@@ -133,7 +122,6 @@ body {
     background-color: rgba(255, 255, 255, 0.822);
     right: -15px;
     top: -15px;
-
 }
 
 
@@ -145,7 +133,6 @@ body {
     width: 10px;
     height: 10px;
     background-color: rgb(182, 187, 206);
-
 }
 
 #moon::after {
@@ -156,13 +143,11 @@ body {
     width: 20px;
     height: 15px;
     background-color: rgb(182, 187, 206);
-
 }
 
 .rise {
     top: 25px !important;
     box-shadow: 0 0 35px rgb(255, 255, 255);
-
 }
 
 #charecter {
@@ -174,7 +159,6 @@ body {
     bottom: 0;
     left: 30px;
     animation: charecter 500ms linear infinite;
-
 }
 
 .block {
@@ -186,7 +170,6 @@ body {
     bottom: 0;
     right: var(--right);
     animation: block 2s linear;
-
 }
 
 /* .move {
@@ -197,7 +180,6 @@ body {
 .jump {
     animation: jump 600ms ease-in-out infinite !important;
     background: url(image/charecter/cahrecter_jump.png) !important;
-
 }
 
 #score {
@@ -205,7 +187,6 @@ body {
     margin-top: 2px;
     margin-left: 6px;
     font-size: 18px;
-
 }
 
 #high-score {
@@ -213,12 +194,10 @@ body {
     margin-left: 6px;
     font-size: 13px;
     line-height: 14px;
-
 }
 
 .game_over {
     background: url(image/charecter/cahrecter_jump.png) !important;
-
 }
 
 @keyframes block {
@@ -230,7 +209,6 @@ body {
     0% {bottom: 0;}
     50% {bottom: 100px;}
     100% {bottom: 0;}
-    
 }
 
 @keyframes clouds {

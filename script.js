@@ -7,11 +7,7 @@ let hscore = document.getElementById("high-score");
 let score = document.getElementById("score");
 
 
-
-
-
 // jump function ++
-
 document.addEventListener("keydown", jump);
 function jump(e) {
     let keyName = e.code
@@ -25,10 +21,7 @@ function jump(e) {
     }
 }
 
-
-
 //function score ++
-
 let scoreinterval = setInterval(scores, 100);
 let storageScore = localStorage.getItem("score");
 let hscoreNumber = storageScore;
@@ -47,12 +40,8 @@ function scores() {
 
 }
 
-
-
 //create block fonction --
-
 let newBlock; //bayad az kode javascript harekat dade shavad na css
-
 function createBlock() {
     newBlock = document.createElement("div");
     game.appendChild(newBlock);
@@ -60,8 +49,6 @@ function createBlock() {
 }
 createBlock();
 let blockinterval = setInterval(createBlock, 2200)
-
-
 
 // morning and night function ++
 
@@ -83,7 +70,6 @@ setInterval(() => {
 }, 15000);
 
 
-
 //game over function
 
 let x = 1;
@@ -91,30 +77,23 @@ setInterval(checkGame);
 function checkGame() {
 
     //variable
-
     let leftNewBlock = newBlock.offsetLeft;
     let widthNewBlock = newBlock.offsetWidth;
     let heightNewBlock = newBlock.offsetHeight
     let topCharecter = charecter.offsetTop;
 
-
-
     //removeblock
-
     if (leftNewBlock == -20) {
         newBlock.remove();
 
     }
 
 
-
     //check game over
-
     if (leftNewBlock >= 35 - widthNewBlock && leftNewBlock <= 80 && topCharecter >= 160 - heightNewBlock) {
         charecter.classList.add("game_over");
 
         //score game over
-
         if (scoreNumber > hscoreNumber) {
             hscore.childNodes[1].textContent = scoreNumber - 1;
             localStorage.setItem("score", scoreNumber - 1);
@@ -124,9 +103,6 @@ function checkGame() {
 
         //block game over
         clearInterval(blockinterval);
-
-
-
         if (x == 1) {
             setTimeout(() => {
                 charecter.classList.add("jump")
