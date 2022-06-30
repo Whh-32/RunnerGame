@@ -3,7 +3,9 @@
 
 #### Note:
 
-Unfortunately, in this game, obstacles have a similar pattern
+1.Click Space and jump!!
+
+2.Unfortunately, in this game, obstacles have a similar pattern
 
 #### Capabilities:
 
